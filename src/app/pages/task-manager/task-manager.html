@@ -1,0 +1,101 @@
+<!-- NavBar -->
+ <header>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <div class="container">
+            <a  class="navbar-brand"  routerLink="/task">Task Manager</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class=" navbar-nav ms-auto" >
+                    <li class="nav-item"><a class="nav-link active mx-2" href="">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link mx-2" href="">Tasks</a></li>
+                    <li class="nav-item"><a class="nav-link mx-2" href="">Reports</a></li>
+                    <!-- <li><a href="">Dashboard</a></li> -->
+                </ul>
+            </div>
+
+            
+        </div>
+    </nav>
+    <!-- Breadcrumb :it shows navigation path-->
+     <nav class="m-3">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item" ><a  href="">Home</a></li>
+            <li class="breadcrumb-item"><a href="">Dashboard</a></li>
+            <li class="breadcrumb-item active">Tasks</li>
+        </ol>
+     </nav>
+ </header>
+
+ <main>
+    <div class="container">
+        <!-- button -->
+         <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#addTaskModal">Add Task</button>
+         <!-- cards -->
+          <div class="card mt-2">
+            <div class="card-header">
+                <h3>Task List</h3>
+            </div>
+                <div class="card-body">
+                    <!-- list group -->
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item active d-flex justify-content-between algin-items-center">Task 1
+                            <!-- badges:indicate messages -->
+                            <span class="badge bg-dark rounded-pill"> new </span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between algin-items-center">Task 2
+                            <span class="badge bg-warning rounded-pill"> In-Progress </span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between algin-items-center">Task 3
+                            <span class="badge bg-success rounded-pill"> Finished </span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between algin-items-center">Task 4
+                            <span class="badge bg-danger rounded-pill"> Canceled </span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Modal -->
+                 <div class="modal fade"  id="addTaskModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Add Task</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="">
+                                    <div>
+                                        <label for="taskname" class="form-label">Task Name</label>
+                                        <input type="text" class="form-control" name="" id="taskname"> 
+                                    </div>
+                                    <div>
+                                        <label for="taskdesc" class="form-label">Task Description</label>
+                                        <textarea type="text" class="form-control" name="" id="taskdesc"> </textarea>
+                                    </div>
+                                    <div>
+                                        <label for="taskstatus" class="form-label">Task status</label>
+                                        <select name="" class="form-select" id="taskstatus">
+                                            <option value="" selected>New</option>
+                                            <option value="">In-Progress</option>
+                                            <option value="">Finished</option>
+                                            <option value="">Canceled</option>
+                                        </select>
+                                    </div>
+                                    
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" >Save</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                            </div>
+                        </div>
+                            
+                    </div>
+                 </div>
+           
+          </div>
+    </div>
+ </main>
+
+ 
+ 
